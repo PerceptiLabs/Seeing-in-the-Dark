@@ -1,0 +1,1554 @@
+{
+    "networkName": "SID_U-Net",
+    "networkID": "1589320999731",
+    "networkMeta": {},
+    "networkElementList": {
+        "1589911710301": {
+            "layerId": "1589911710301",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Data_1",
+            "layerType": "Data",
+            "layerSettings": {
+                "Type": "Data",
+                "testInfoIsInput": true,
+                "accessProperties": {
+                    "Columns": [],
+                    "Dataset_size": 3000,
+                    "Category": "Local",
+                    "Type": "Data",
+                    "Sources": [],
+                    "PathFake": [],
+                    "Partition_list": [
+                        [
+                            70,
+                            25,
+                            5
+                        ]
+                    ],
+                    "Shuffle_data": true
+                }
+            },
+            "layerSettingsTabName": "Computer",
+            "layerCode": null,
+            "layerCodeError": {},
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 220,
+                    "left": 110
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "DataData",
+            "connectionOut": [
+                "1590008890268"
+            ],
+            "connectionIn": [],
+            "connectionArrow": [
+                "1590008890268"
+            ]
+        },
+        "1589911744648": {
+            "layerId": "1589911744648",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Data_2",
+            "layerType": "Data",
+            "layerSettings": {
+                "Type": "Data",
+                "testInfoIsInput": true,
+                "accessProperties": {
+                    "Columns": [],
+                    "Dataset_size": "",
+                    "Category": "Local",
+                    "Type": "Data",
+                    "Sources": [],
+                    "PathFake": [],
+                    "Partition_list": [
+                        [
+                            70,
+                            25,
+                            5
+                        ]
+                    ],
+                    "Shuffle_data": true,
+                    "Action_space": ""
+                }
+            },
+            "layerSettingsTabName": "Computer",
+            "layerCode": null,
+            "layerCodeError": {},
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 310,
+                    "left": 110
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "DataData",
+            "connectionOut": [
+                "1589911799697"
+            ],
+            "connectionIn": [],
+            "connectionArrow": [
+                "1589911799697"
+            ]
+        },
+        "1589911799697": {
+            "layerId": "1589911799697",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Convolution_1",
+            "layerType": "Other",
+            "layerSettings": {
+                "Conv_dim": "2D",
+                "Patch_size": "3",
+                "Stride": "1",
+                "Padding": "SAME",
+                "Feature_maps": "8",
+                "Activation_function": "ReLU",
+                "Dropout": false,
+                "Keep_prob": "1",
+                "PoolBool": false,
+                "Pooling": "Max",
+                "Pool_area": "2",
+                "Pool_padding": "SAME",
+                "Pool_stride": "2"
+            },
+            "layerSettingsTabName": "Settings",
+            "layerCode": null,
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 310,
+                    "left": 220
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "DeepLearningConv",
+            "connectionOut": [
+                "1589911866456",
+                "1590007908101"
+            ],
+            "connectionIn": [
+                "1589911744648"
+            ],
+            "connectionArrow": [
+                "1589911866456",
+                "1590007908101"
+            ]
+        },
+        "1589911866456": {
+            "layerId": "1589911866456",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Convolution_2",
+            "layerType": "Other",
+            "layerSettings": {
+                "Conv_dim": "2D",
+                "Patch_size": "3",
+                "Stride": "1",
+                "Padding": "SAME",
+                "Feature_maps": "16",
+                "Activation_function": "ReLU",
+                "Dropout": false,
+                "Keep_prob": "1",
+                "PoolBool": true,
+                "Pooling": "Max",
+                "Pool_area": "2",
+                "Pool_padding": "SAME",
+                "Pool_stride": "2"
+            },
+            "layerSettingsTabName": "Settings",
+            "layerCode": null,
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 400,
+                    "left": 290
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "DeepLearningConv",
+            "connectionOut": [
+                "1589911937820"
+            ],
+            "connectionIn": [
+                "1589911799697"
+            ],
+            "connectionArrow": [
+                "1589911937820"
+            ]
+        },
+        "1589911937820": {
+            "layerId": "1589911937820",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Convolution_3",
+            "layerType": "Other",
+            "layerSettings": {
+                "Conv_dim": "2D",
+                "Patch_size": "3",
+                "Stride": "1",
+                "Padding": "SAME",
+                "Feature_maps": "16",
+                "Activation_function": "ReLU",
+                "Dropout": false,
+                "Keep_prob": "1",
+                "PoolBool": false,
+                "Pooling": "Max",
+                "Pool_area": "2",
+                "Pool_padding": "SAME",
+                "Pool_stride": "2"
+            },
+            "layerSettingsTabName": "Settings",
+            "layerCode": null,
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 490,
+                    "left": 290
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "DeepLearningConv",
+            "connectionOut": [
+                "1589911978379",
+                "1590007826222"
+            ],
+            "connectionIn": [
+                "1589911866456"
+            ],
+            "connectionArrow": [
+                "1589911978379",
+                "1590007826222"
+            ]
+        },
+        "1589911978379": {
+            "layerId": "1589911978379",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Convolution_4",
+            "layerType": "Other",
+            "layerSettings": {
+                "Conv_dim": "2D",
+                "Patch_size": "3",
+                "Stride": "1",
+                "Padding": "SAME",
+                "Feature_maps": "32",
+                "Activation_function": "ReLU",
+                "Dropout": false,
+                "Keep_prob": "1",
+                "PoolBool": true,
+                "Pooling": "Max",
+                "Pool_area": "2",
+                "Pool_padding": "SAME",
+                "Pool_stride": "2"
+            },
+            "layerSettingsTabName": "Settings",
+            "layerCode": null,
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 580,
+                    "left": 360
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "DeepLearningConv",
+            "connectionOut": [
+                "1589912013138"
+            ],
+            "connectionIn": [
+                "1589911937820"
+            ],
+            "connectionArrow": [
+                "1589912013138"
+            ]
+        },
+        "1589912013138": {
+            "layerId": "1589912013138",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Convolution_5",
+            "layerType": "Other",
+            "layerSettings": {
+                "Conv_dim": "2D",
+                "Patch_size": "3",
+                "Stride": "1",
+                "Padding": "SAME",
+                "Feature_maps": "32",
+                "Activation_function": "ReLU",
+                "Dropout": false,
+                "Keep_prob": "1",
+                "PoolBool": false,
+                "Pooling": "Max",
+                "Pool_area": "2",
+                "Pool_padding": "SAME",
+                "Pool_stride": "2"
+            },
+            "layerSettingsTabName": "Settings",
+            "layerCode": null,
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 670,
+                    "left": 360
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "DeepLearningConv",
+            "connectionOut": [
+                "1589912083843",
+                "1590007768307"
+            ],
+            "connectionIn": [
+                "1589911978379"
+            ],
+            "connectionArrow": [
+                "1589912083843",
+                "1590007768307"
+            ]
+        },
+        "1589912083843": {
+            "layerId": "1589912083843",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Convolution_6",
+            "layerType": "Other",
+            "layerSettings": {
+                "Conv_dim": "2D",
+                "Patch_size": "3",
+                "Stride": "1",
+                "Padding": "SAME",
+                "Feature_maps": "64",
+                "Activation_function": "ReLU",
+                "Dropout": false,
+                "Keep_prob": "1",
+                "PoolBool": true,
+                "Pooling": "Max",
+                "Pool_area": "2",
+                "Pool_padding": "SAME",
+                "Pool_stride": "2"
+            },
+            "layerSettingsTabName": "Settings",
+            "layerCode": null,
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 760,
+                    "left": 430
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "DeepLearningConv",
+            "connectionOut": [
+                "1589912116012"
+            ],
+            "connectionIn": [
+                "1589912013138"
+            ],
+            "connectionArrow": [
+                "1589912116012"
+            ]
+        },
+        "1589912116012": {
+            "layerId": "1589912116012",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Convolution_7",
+            "layerType": "Other",
+            "layerSettings": {
+                "Conv_dim": "2D",
+                "Patch_size": "3",
+                "Stride": "1",
+                "Padding": "SAME",
+                "Feature_maps": "64",
+                "Activation_function": "ReLU",
+                "Dropout": false,
+                "Keep_prob": "1",
+                "PoolBool": false,
+                "Pooling": "Max",
+                "Pool_area": "2",
+                "Pool_padding": "SAME",
+                "Pool_stride": "2"
+            },
+            "layerSettingsTabName": "Code",
+            "layerCode": {
+                "Output": "class DeepLearningConv_Convolution_7(Tf1xLayer):\n    def __init__(self):\n        self._scope = 'DeepLearningConv_Convolution_7'        \n        # TODO: implement support for 1d and 3d conv, dropout, funcs, pooling, etc\n        self._patch_size = 3\n        self._feature_maps = 64\n        self._padding = 'SAME'\n        self._stride = 1\n        self._keep_prob = 1\n        self._variables = {}\n        \n    def __call__(self, x):\n        \"\"\" Takes a tensor as input and feeds it forward through a convolutional layer, returning a newtensor.\"\"\"                \n        with tf.compat.v1.variable_scope(self._scope, reuse=tf.compat.v1.AUTO_REUSE):\n            shape = [\n            self._patch_size,\n            self._patch_size,\n            x.get_shape().as_list()[-1],\n            self._feature_maps\n            ]\n            #initial = tf.random.truncated_normal(\n            #    shape,\n            #   stddev=np.sqrt(2/(self._patch_size)**2 + self._feature_maps)\n            #)\n            W = tf.compat.v1.get_variable('W', shape = shape, initializer=  tf.contrib.layers.xavier_initializer())\n            \n            #initial = tf.constant(0.1, shape=[self._feature_maps])\n            b = tf.compat.v1.get_variable('b', shape=[self._feature_maps], initializer=tf.zeros_initializer())\n            y = tf.add(tf.nn.conv2d(x, W, strides=[1, self._stride, self._stride, 1], padding=self._padding), b)\n            y = tf.compat.v1.nn.relu(y)\n        self._variables = {k: v for k, v in locals().items() if can_serialize(v)}\n        return y\n\n    @property\n    def variables(self):\n        \"\"\"Any variables belonging to this layer that should be rendered in the frontend.\n        \n        Returns:\n            A dictionary with tensor names for keys and picklable for values.\n        \"\"\"\n        return self._variables.copy()\n\n    @property\n    def trainable_variables(self):\n        \"\"\"Any trainable variables belonging to this layer that should be updated during backpropagation. Their gradients will also be rendered in the frontend.\n        \n        Returns:\n            A dictionary with tensor names for keys and tensors for values.\n        \"\"\"\n        variables = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope=self._scope)\n        variables = {v.name: v for v in variables}\n        return variables        \n\n    @property\n    def weights(self):\n        \"\"\"Any weight tensors belonging to this layer that should be rendered in the frontend.\n\n        Return:\n            A dictionary with tensor names for keys and tensors for values.\n        \"\"\"        \n        with tf.compat.v1.variable_scope(self._scope, reuse=tf.compat.v1.AUTO_REUSE):\n            w = tf.compat.v1.get_variable('W')\n            return {w.name: w}\n\n    @property\n    def biases(self):\n        \"\"\"Any weight tensors belonging to this layer that should be rendered in the frontend.\n\n        Return:\n            A dictionary with tensor names for keys and tensors for values.\n        \"\"\"        \n        with tf.compat.v1.variable_scope(self._scope, reuse=tf.compat.v1.AUTO_REUSE):\n            b = tf.compat.v1.get_variable('b')\n            return {b.name: b}\n"
+            },
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 850,
+                    "left": 430
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "DeepLearningConv",
+            "connectionOut": [
+                "1589912163265",
+                "1590007634956"
+            ],
+            "connectionIn": [
+                "1589912083843"
+            ],
+            "connectionArrow": [
+                "1589912163265",
+                "1590007634956"
+            ]
+        },
+        "1589912163265": {
+            "layerId": "1589912163265",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Convolution_8",
+            "layerType": "Other",
+            "layerSettings": {
+                "Conv_dim": "2D",
+                "Patch_size": "3",
+                "Stride": "1",
+                "Padding": "SAME",
+                "Feature_maps": "128",
+                "Activation_function": "ReLU",
+                "Dropout": false,
+                "Keep_prob": "1",
+                "PoolBool": true,
+                "Pooling": "Max",
+                "Pool_area": "2",
+                "Pool_padding": "SAME",
+                "Pool_stride": "2"
+            },
+            "layerSettingsTabName": "Settings",
+            "layerCode": null,
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 940,
+                    "left": 500
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "DeepLearningConv",
+            "connectionOut": [
+                "1589912186349"
+            ],
+            "connectionIn": [
+                "1589912116012"
+            ],
+            "connectionArrow": [
+                "1589912186349"
+            ]
+        },
+        "1589912186349": {
+            "layerId": "1589912186349",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Convolution_9",
+            "layerType": "Other",
+            "layerSettings": {
+                "Conv_dim": "2D",
+                "Patch_size": "3",
+                "Stride": "1",
+                "Padding": "SAME",
+                "Feature_maps": "128",
+                "Activation_function": "ReLU",
+                "Dropout": false,
+                "Keep_prob": "1",
+                "PoolBool": false,
+                "Pooling": "Max",
+                "Pool_area": "2",
+                "Pool_padding": "SAME",
+                "Pool_stride": "2"
+            },
+            "layerSettingsTabName": "Settings",
+            "layerCode": null,
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 1030,
+                    "left": 500
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "DeepLearningConv",
+            "connectionOut": [
+                "1589912237826",
+                "1590002468024"
+            ],
+            "connectionIn": [
+                "1589912163265"
+            ],
+            "connectionArrow": [
+                "1589912237826",
+                "1590002468024"
+            ]
+        },
+        "1589912237826": {
+            "layerId": "1589912237826",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Convolution_10",
+            "layerType": "Other",
+            "layerSettings": {
+                "Conv_dim": "2D",
+                "Patch_size": "3",
+                "Stride": "1",
+                "Padding": "SAME",
+                "Feature_maps": "256",
+                "Activation_function": "ReLU",
+                "Dropout": false,
+                "Keep_prob": "1",
+                "PoolBool": true,
+                "Pooling": "Max",
+                "Pool_area": "2",
+                "Pool_padding": "SAME",
+                "Pool_stride": "2"
+            },
+            "layerSettingsTabName": "Settings",
+            "layerCode": null,
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 1120,
+                    "left": 570
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "DeepLearningConv",
+            "connectionOut": [
+                "1589912293409"
+            ],
+            "connectionIn": [
+                "1589912186349"
+            ],
+            "connectionArrow": [
+                "1589912293409"
+            ]
+        },
+        "1589912293409": {
+            "layerId": "1589912293409",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Convolution_11",
+            "layerType": "Other",
+            "layerSettings": {
+                "Conv_dim": "2D",
+                "Patch_size": "3",
+                "Stride": "1",
+                "Padding": "SAME",
+                "Feature_maps": "256",
+                "Activation_function": "ReLU",
+                "Dropout": false,
+                "Keep_prob": "1",
+                "PoolBool": false,
+                "Pooling": "Max",
+                "Pool_area": "2",
+                "Pool_padding": "SAME",
+                "Pool_stride": "2"
+            },
+            "layerSettingsTabName": "Code",
+            "layerCode": {
+                "Output": "class DeepLearningConv_Convolution_11(Tf1xLayer):\n    def __init__(self):\n        self._scope = 'DeepLearningConv_Convolution_11'        \n        # TODO: implement support for 1d and 3d conv, dropout, funcs, pooling, etc\n        self._patch_size = 3\n        self._feature_maps = 256\n        self._padding = 'SAME'\n        self._stride = 1\n        self._keep_prob = 1\n        self._variables = {}\n        \n    def __call__(self, x):\n        \"\"\" Takes a tensor as input and feeds it forward through a convolutional layer, returning a newtensor.\"\"\"                \n        with tf.compat.v1.variable_scope(self._scope, reuse=tf.compat.v1.AUTO_REUSE):\n            shape = [\n            self._patch_size,\n            self._patch_size,\n            x.get_shape().as_list()[-1],\n            self._feature_maps\n            ]\n            #initial = tf.random.truncated_normal(\n            #    shape,\n            #   stddev=np.sqrt(2/(self._patch_size)**2 + self._feature_maps)\n            #)\n            W = tf.compat.v1.get_variable('W', shape = shape, initializer=  tf.contrib.layers.xavier_initializer())\n            \n            #initial = tf.constant(0.1, shape=[self._feature_maps])\n            b = tf.compat.v1.get_variable('b', shape=[self._feature_maps], initializer=tf.zeros_initializer())\n            y = tf.add(tf.nn.conv2d(x, W, strides=[1, self._stride, self._stride, 1], padding=self._padding), b)\n            y = tf.compat.v1.nn.relu(y)\n        self._variables = {k: v for k, v in locals().items() if can_serialize(v)}\n        return y\n\n    @property\n    def variables(self):\n        \"\"\"Any variables belonging to this layer that should be rendered in the frontend.\n        \n        Returns:\n            A dictionary with tensor names for keys and picklable for values.\n        \"\"\"\n        return self._variables.copy()\n\n    @property\n    def trainable_variables(self):\n        \"\"\"Any trainable variables belonging to this layer that should be updated during backpropagation. Their gradients will also be rendered in the frontend.\n        \n        Returns:\n            A dictionary with tensor names for keys and tensors for values.\n        \"\"\"\n        variables = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope=self._scope)\n        variables = {v.name: v for v in variables}\n        return variables        \n\n    @property\n    def weights(self):\n        \"\"\"Any weight tensors belonging to this layer that should be rendered in the frontend.\n\n        Return:\n            A dictionary with tensor names for keys and tensors for values.\n        \"\"\"        \n        with tf.compat.v1.variable_scope(self._scope, reuse=tf.compat.v1.AUTO_REUSE):\n            w = tf.compat.v1.get_variable('W')\n            return {w.name: w}\n\n    @property\n    def biases(self):\n        \"\"\"Any weight tensors belonging to this layer that should be rendered in the frontend.\n\n        Return:\n            A dictionary with tensor names for keys and tensors for values.\n        \"\"\"        \n        with tf.compat.v1.variable_scope(self._scope, reuse=tf.compat.v1.AUTO_REUSE):\n            b = tf.compat.v1.get_variable('b')\n            return {b.name: b}\n"
+            },
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 1210,
+                    "left": 570
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "DeepLearningConv",
+            "connectionOut": [
+                "1589927043926"
+            ],
+            "connectionIn": [
+                "1589912237826"
+            ],
+            "connectionArrow": [
+                "1589927043926"
+            ]
+        },
+        "1589927043926": {
+            "layerId": "1589927043926",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Deconvolution_1",
+            "layerType": "Other",
+            "layerSettings": {
+                "Deconv_dim": "2D",
+                "Stride": "2",
+                "Padding": "SAME",
+                "Feature_maps": "128",
+                "Activation_function": "ReLU",
+                "Dropout": false,
+                "Keep_prob": "1",
+                "Patch_size": "2"
+            },
+            "layerSettingsTabName": "Code",
+            "layerCode": {
+                "Output": "class DeepLearningDeconv_Deconvolution_1(Tf1xLayer):\n    def __init__(self):\n        self._scope = 'DeepLearningDeconv_Deconvolution_1'        \n        self._patch_size = 2\n        self._feature_maps = 128\n        self._padding = 'SAME'\n        self._stride = 2\n        self._keep_prob = 1\n        self._variables = {}\n        \n    def __call__(self, x):\n        \"\"\" Takes a tensor as input and feeds it forward through a deconvolutional layer, returning a newtensor.\"\"\"                \n        \n        with tf.compat.v1.variable_scope(self._scope, reuse=tf.compat.v1.AUTO_REUSE):\n            shape = [\n                self._patch_size,\n                self._patch_size,\n                self._feature_maps,\n                x.get_shape().as_list()[-1]\n            ]\n            initial = tf.random.truncated_normal(\n                shape,\n                stddev=np.sqrt(2/(self._patch_size)**2 + self._feature_maps)\n            )\n            W = tf.compat.v1.get_variable('W', initializer=initial)\n            \n            initial = tf.constant(0.1, shape=[self._feature_maps])\n            b = tf.compat.v1.get_variable('b', initializer=initial)\n            output_shape = tf.TensorShape([x.get_shape().as_list()[0]] + [node_shape*self._stride for node_shape in  x.get_shape().as_list()[1:-1]] + [self._feature_maps])\n            y = tf.nn.conv2d_transpose(x, W, output_shape, strides=[1, self._stride, self._stride, 1], padding=self._padding)\n\n            y = y + b\n            y = tf.compat.v1.nn.relu(y)\n            \n        self._variables = {k: v for k, v in locals().items() if can_serialize(v)}\n        return y\n\n    @property\n    def variables(self):\n        \"\"\"Any variables belonging to this layer that should be rendered in the frontend.\n        \n        Returns:\n            A dictionary with tensor names for keys and picklable for values.\n        \"\"\"\n        return self._variables.copy()\n\n    @property\n    def trainable_variables(self):\n        \"\"\"Any trainable variables belonging to this layer that should be updated during backpropagation. Their gradients will also be rendered in the frontend.\n        \n        Returns:\n            A dictionary with tensor names for keys and tensors for values.\n        \"\"\"\n        variables = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope=self._scope)\n        variables = {v.name: v for v in variables}\n        return variables        \n\n    @property\n    def weights(self):\n        \"\"\"Any weight tensors belonging to this layer that should be rendered in the frontend.\n\n        Return:\n            A dictionary with tensor names for keys and tensors for values.\n        \"\"\"        \n        with tf.compat.v1.variable_scope(self._scope, reuse=tf.compat.v1.AUTO_REUSE):\n            w = tf.compat.v1.get_variable('W')\n            return {w.name: w}\n\n    @property\n    def biases(self):\n        \"\"\"Any weight tensors belonging to this layer that should be rendered in the frontend.\n\n        Return:\n            A dictionary with tensor names for keys and tensors for values.\n        \"\"\"        \n        with tf.compat.v1.variable_scope(self._scope, reuse=tf.compat.v1.AUTO_REUSE):\n            b = tf.compat.v1.get_variable('b')\n            return {b.name: b}\n"
+            },
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 1160,
+                    "left": 660
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "DeepLearningDeconv",
+            "connectionOut": [
+                "1590002468024"
+            ],
+            "connectionIn": [
+                "1589912293409"
+            ],
+            "connectionArrow": [
+                "1590002468024"
+            ]
+        },
+        "1590002468024": {
+            "layerId": "1590002468024",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Merge_1",
+            "layerType": "Other",
+            "layerSettings": {
+                "Type": "Concat",
+                "Merge_dim": "-1"
+            },
+            "layerSettingsTabName": "Code",
+            "layerCode": {
+                "Output": "class MathMerge_Merge_1(Tf1xLayer):\n\n    def __init__(self):\n        self._merge_dim = -1\n        self._merget_order = None\n\n    def __call__(self, x1, x2) -> tf.Tensor:\n        \"\"\" Takes two tensors as input and merges them accordingly. \"\"\"\n        y = None\n        y = tf.concat([x1, x2], self._merge_dim)\n        self._variables = {k: v for k, v in locals().items() if can_serialize(v)}    \n        return y\n\n    @property\n    def variables(self) -> Dict[str, Picklable]:\n        \"\"\"Any variables belonging to this layer that should be rendered in the frontend.\n        \n        Returns:\n            A dictionary with tensor names for keys and picklable for values.\n        \"\"\"\n\n        return self._variables.copy()\n\n    @property\n    def trainable_variables(self) -> Dict[str, tf.Tensor]:\n        \"\"\"Any trainable variables belonging to this layer that should be updated during backpropagation. Their gradients will also be rendered in the frontend.\n        \n        Returns:\n            A dictionary with tensor names for keys and tensors for values.\n        \"\"\"\n        return {}\n\n    @property\n    def weights(self) -> Dict[str, tf.Tensor]:\n        \"\"\"Any weight tensors belonging to this layer that should be rendered in the frontend.\n\n        Return:\n            A dictionary with tensor names for keys and tensors for values.\n        \"\"\"        \n        return {}\n\n    @property\n    def biases(self) -> Dict[str, tf.Tensor]:\n        \"\"\"Any weight tensors belonging to this layer that should be rendered in the frontend.\n\n        Return:\n            A dictionary with tensor names for keys and tensors for values.\n        \"\"\"        \n        return {}        \n"
+            },
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 1030,
+                    "left": 660
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "MathMerge",
+            "connectionOut": [
+                "1590007594560"
+            ],
+            "connectionIn": [
+                "1589912186349",
+                "1589927043926"
+            ],
+            "connectionArrow": [
+                "1590007594560"
+            ]
+        },
+        "1590007594560": {
+            "layerId": "1590007594560",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Convolution_12",
+            "layerType": "Other",
+            "layerSettings": {
+                "Conv_dim": "2D",
+                "Patch_size": "3",
+                "Stride": "1",
+                "Padding": "SAME",
+                "Feature_maps": "128",
+                "Activation_function": "ReLU",
+                "Dropout": false,
+                "Keep_prob": "1",
+                "PoolBool": false,
+                "Pooling": "Max",
+                "Pool_area": "2",
+                "Pool_padding": "SAME",
+                "Pool_stride": "2"
+            },
+            "layerSettingsTabName": "Settings",
+            "layerCode": null,
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 1030,
+                    "left": 750
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "DeepLearningConv",
+            "connectionOut": [
+                "1590007623060"
+            ],
+            "connectionIn": [
+                "1590002468024"
+            ],
+            "connectionArrow": [
+                "1590007623060"
+            ]
+        },
+        "1590007623060": {
+            "layerId": "1590007623060",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Deconvolution_2",
+            "layerType": "Other",
+            "layerSettings": {
+                "Deconv_dim": "2D",
+                "Stride": "2",
+                "Padding": "SAME",
+                "Feature_maps": "64",
+                "Activation_function": "ReLU",
+                "Dropout": false,
+                "Keep_prob": "1",
+                "Patch_size": "2"
+            },
+            "layerSettingsTabName": "Settings",
+            "layerCode": null,
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 940,
+                    "left": 750
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "DeepLearningDeconv",
+            "connectionOut": [
+                "1590007634956"
+            ],
+            "connectionIn": [
+                "1590007594560"
+            ],
+            "connectionArrow": [
+                "1590007634956"
+            ]
+        },
+        "1590007634956": {
+            "layerId": "1590007634956",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Merge_2",
+            "layerType": "Other",
+            "layerSettings": {
+                "Type": "Concat",
+                "Merge_dim": "-1"
+            },
+            "layerCode": null,
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 850,
+                    "left": 750
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "MathMerge",
+            "connectionOut": [
+                "1590007730499"
+            ],
+            "connectionIn": [
+                "1590007623060",
+                "1589912116012"
+            ],
+            "connectionArrow": [
+                "1590007730499"
+            ],
+            "layerSettingsTabName": "Settings"
+        },
+        "1590007730499": {
+            "layerId": "1590007730499",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Convolution_13",
+            "layerType": "Other",
+            "layerSettings": {
+                "Conv_dim": "2D",
+                "Patch_size": "3",
+                "Stride": "1",
+                "Padding": "SAME",
+                "Feature_maps": "64",
+                "Activation_function": "ReLU",
+                "Dropout": false,
+                "Keep_prob": "1",
+                "PoolBool": false,
+                "Pooling": "Max",
+                "Pool_area": "2",
+                "Pool_padding": "SAME",
+                "Pool_stride": "2"
+            },
+            "layerSettingsTabName": "Settings",
+            "layerCode": null,
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 850,
+                    "left": 840
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "DeepLearningConv",
+            "connectionOut": [
+                "1590007757216"
+            ],
+            "connectionIn": [
+                "1590007634956"
+            ],
+            "connectionArrow": [
+                "1590007757216"
+            ]
+        },
+        "1590007757216": {
+            "layerId": "1590007757216",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Deconvolution_3",
+            "layerType": "Other",
+            "layerSettings": {
+                "Deconv_dim": "2D",
+                "Stride": "2",
+                "Padding": "SAME",
+                "Feature_maps": "32",
+                "Activation_function": "ReLU",
+                "Dropout": false,
+                "Keep_prob": "1",
+                "Patch_size": "2"
+            },
+            "layerSettingsTabName": "Settings",
+            "layerCode": null,
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 760,
+                    "left": 840
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "DeepLearningDeconv",
+            "connectionOut": [
+                "1590007768307"
+            ],
+            "connectionIn": [
+                "1590007730499"
+            ],
+            "connectionArrow": [
+                "1590007768307"
+            ]
+        },
+        "1590007768307": {
+            "layerId": "1590007768307",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Merge_3",
+            "layerType": "Other",
+            "layerSettings": {
+                "Type": "Concat",
+                "Merge_dim": "-1"
+            },
+            "layerSettingsTabName": "Settings",
+            "layerCode": null,
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 670,
+                    "left": 840
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "MathMerge",
+            "connectionOut": [
+                "1590007784992"
+            ],
+            "connectionIn": [
+                "1589912013138",
+                "1590007757216"
+            ],
+            "connectionArrow": [
+                "1590007784992"
+            ]
+        },
+        "1590007784992": {
+            "layerId": "1590007784992",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Convolution_14",
+            "layerType": "Other",
+            "layerSettings": {
+                "Conv_dim": "2D",
+                "Patch_size": "3",
+                "Stride": "1",
+                "Padding": "SAME",
+                "Feature_maps": "32",
+                "Activation_function": "ReLU",
+                "Dropout": false,
+                "Keep_prob": "1",
+                "PoolBool": false,
+                "Pooling": "Max",
+                "Pool_area": "2",
+                "Pool_padding": "SAME",
+                "Pool_stride": "2"
+            },
+            "layerSettingsTabName": "Settings",
+            "layerCode": null,
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 670,
+                    "left": 930
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "DeepLearningConv",
+            "connectionOut": [
+                "1590007808644"
+            ],
+            "connectionIn": [
+                "1590007768307"
+            ],
+            "connectionArrow": [
+                "1590007808644"
+            ]
+        },
+        "1590007808644": {
+            "layerId": "1590007808644",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Deconvolution_4",
+            "layerType": "Other",
+            "layerSettings": {
+                "Deconv_dim": "2D",
+                "Stride": "2",
+                "Padding": "SAME",
+                "Feature_maps": "16",
+                "Activation_function": "ReLU",
+                "Dropout": false,
+                "Keep_prob": "1",
+                "Patch_size": "2"
+            },
+            "layerSettingsTabName": "Settings",
+            "layerCode": null,
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 580,
+                    "left": 930
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "DeepLearningDeconv",
+            "connectionOut": [
+                "1590007826222"
+            ],
+            "connectionIn": [
+                "1590007784992"
+            ],
+            "connectionArrow": [
+                "1590007826222"
+            ]
+        },
+        "1590007826222": {
+            "layerId": "1590007826222",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Merge_4",
+            "layerType": "Other",
+            "layerSettings": {
+                "Type": "Concat",
+                "Merge_dim": "-1"
+            },
+            "layerSettingsTabName": "Settings",
+            "layerCode": null,
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 490,
+                    "left": 930
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "MathMerge",
+            "connectionOut": [
+                "1590007875605"
+            ],
+            "connectionIn": [
+                "1589911937820",
+                "1590007808644"
+            ],
+            "connectionArrow": [
+                "1590007875605"
+            ]
+        },
+        "1590007875605": {
+            "layerId": "1590007875605",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Convolution_15",
+            "layerType": "Other",
+            "layerSettings": {
+                "Conv_dim": "2D",
+                "Patch_size": "3",
+                "Stride": "1",
+                "Padding": "SAME",
+                "Feature_maps": "16",
+                "Activation_function": "ReLU",
+                "Dropout": false,
+                "Keep_prob": "1",
+                "PoolBool": false,
+                "Pooling": "Max",
+                "Pool_area": "2",
+                "Pool_padding": "SAME",
+                "Pool_stride": "2"
+            },
+            "layerSettingsTabName": "Settings",
+            "layerCode": null,
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 490,
+                    "left": 1020
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "DeepLearningConv",
+            "connectionOut": [
+                "1590007897228"
+            ],
+            "connectionIn": [
+                "1590007826222"
+            ],
+            "connectionArrow": [
+                "1590007897228"
+            ]
+        },
+        "1590007897228": {
+            "layerId": "1590007897228",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Deconvolution_5",
+            "layerType": "Other",
+            "layerSettings": {
+                "Deconv_dim": "2D",
+                "Stride": "2",
+                "Padding": "SAME",
+                "Feature_maps": "8",
+                "Activation_function": "ReLU",
+                "Dropout": false,
+                "Keep_prob": "1",
+                "Patch_size": "2"
+            },
+            "layerSettingsTabName": "Settings",
+            "layerCode": null,
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 400,
+                    "left": 1020
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "DeepLearningDeconv",
+            "connectionOut": [
+                "1590007908101"
+            ],
+            "connectionIn": [
+                "1590007875605"
+            ],
+            "connectionArrow": [
+                "1590007908101"
+            ]
+        },
+        "1590007908101": {
+            "layerId": "1590007908101",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Merge_5",
+            "layerType": "Other",
+            "layerSettings": {
+                "Type": "Concat",
+                "Merge_dim": "-1"
+            },
+            "layerSettingsTabName": "Settings",
+            "layerCode": null,
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 310,
+                    "left": 1020
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "MathMerge",
+            "connectionOut": [
+                "1590007958056"
+            ],
+            "connectionIn": [
+                "1590007897228",
+                "1589911799697"
+            ],
+            "connectionArrow": [
+                "1590007958056"
+            ]
+        },
+        "1590007958056": {
+            "layerId": "1590007958056",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Convolution_16",
+            "layerType": "Other",
+            "layerSettings": {
+                "Conv_dim": "2D",
+                "Patch_size": "3",
+                "Stride": "1",
+                "Padding": "SAME",
+                "Feature_maps": "12",
+                "Activation_function": "ReLU",
+                "Dropout": false,
+                "Keep_prob": "1",
+                "PoolBool": false,
+                "Pooling": "Max",
+                "Pool_area": "2",
+                "Pool_padding": "SAME",
+                "Pool_stride": "2"
+            },
+            "layerSettingsTabName": "Code",
+            "layerCode": {
+                "Output": "class DeepLearningConv_Convolution_16(Tf1xLayer):\n    def __init__(self):\n        self._scope = 'DeepLearningConv_Convolution_16'        \n        # TODO: implement support for 1d and 3d conv, dropout, funcs, pooling, etc\n        self._patch_size = 3\n        self._feature_maps = 12\n        self._padding = 'SAME'\n        self._stride = 1\n        self._keep_prob = 1\n        self._variables = {}\n        \n    def __call__(self, x):\n        \"\"\" Takes a tensor as input and feeds it forward through a convolutional layer, returning a newtensor.\"\"\"                \n        with tf.compat.v1.variable_scope(self._scope, reuse=tf.compat.v1.AUTO_REUSE):\n            shape = [\n            self._patch_size,\n            self._patch_size,\n            x.get_shape().as_list()[-1],\n            self._feature_maps\n            ]\n            #initial = tf.random.truncated_normal(\n            #    shape,\n            #   stddev=np.sqrt(2/(self._patch_size)**2 + self._feature_maps)\n            #)\n            W = tf.compat.v1.get_variable('W', shape = shape, initializer=  tf.contrib.layers.xavier_initializer())\n            \n            #initial = tf.constant(0.1, shape=[self._feature_maps])\n            b = tf.compat.v1.get_variable('b', shape=[self._feature_maps], initializer=tf.zeros_initializer())\n            y = tf.add(tf.nn.conv2d(x, W, strides=[1, self._stride, self._stride, 1], padding=self._padding), b)\n            y = tf.compat.v1.nn.relu(y)\n            y = tf.nn.depth_to_space(y, 2)\n        self._variables = {k: v for k, v in locals().items() if can_serialize(v)}\n        return y\n\n    @property\n    def variables(self):\n        \"\"\"Any variables belonging to this layer that should be rendered in the frontend.\n        \n        Returns:\n            A dictionary with tensor names for keys and picklable for values.\n        \"\"\"\n        return self._variables.copy()\n\n    @property\n    def trainable_variables(self):\n        \"\"\"Any trainable variables belonging to this layer that should be updated during backpropagation. Their gradients will also be rendered in the frontend.\n        \n        Returns:\n            A dictionary with tensor names for keys and tensors for values.\n        \"\"\"\n        variables = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope=self._scope)\n        variables = {v.name: v for v in variables}\n        return variables        \n\n    @property\n    def weights(self):\n        \"\"\"Any weight tensors belonging to this layer that should be rendered in the frontend.\n\n        Return:\n            A dictionary with tensor names for keys and tensors for values.\n        \"\"\"        \n        with tf.compat.v1.variable_scope(self._scope, reuse=tf.compat.v1.AUTO_REUSE):\n            w = tf.compat.v1.get_variable('W')\n            return {w.name: w}\n\n    @property\n    def biases(self):\n        \"\"\"Any weight tensors belonging to this layer that should be rendered in the frontend.\n\n        Return:\n            A dictionary with tensor names for keys and tensors for values.\n        \"\"\"        \n        with tf.compat.v1.variable_scope(self._scope, reuse=tf.compat.v1.AUTO_REUSE):\n            b = tf.compat.v1.get_variable('b')\n            return {b.name: b}\n"
+            },
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 310,
+                    "left": 1110
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "DeepLearningConv",
+            "connectionOut": [
+                "1590008890268"
+            ],
+            "connectionIn": [
+                "1590007908101"
+            ],
+            "connectionArrow": [
+                "1590008890268"
+            ]
+        },
+        "1590008890268": {
+            "layerId": "1590008890268",
+            "copyId": null,
+            "copyContainerElement": null,
+            "layerName": "Normal_1",
+            "layerType": "Training",
+            "layerSettings": {
+                "Labels": "1589911710301",
+                "Epochs": "10",
+                "N_class": "1",
+                "Loss": "Quadratic",
+                "Class_weights": "1",
+                "Learning_rate": "0.001",
+                "Optimizer": "ADAM",
+                "Beta_1": "0.9",
+                "Beta_2": "0.999",
+                "Momentum": "0.9",
+                "Decay_steps": "100000",
+                "Decay_rate": "0.96",
+                "Training_iters": "20000",
+                "Batch_size": "10"
+            },
+            "layerSettingsTabName": "Code",
+            "layerCode": {
+                "Output": "class TrainNormal_Normal_1(ClassificationLayer):\n\n    def __init__(self):\n        self._n_epochs = 1_000_000\n        self._batch_size = 4\n\n        self._stopped = False\n        self._paused = False\n        self._headless = False\n        self._status = 'created'\n        \n        self._loss_training = 0.0\n        self._loss_validation = 0.0\n        self._loss_testing = 0.0      \n\n        self._accuracy_training = 0.0\n        self._accuracy_validation = 0.0\n        self._accuracy_testing = 0.0      \n        \n        self._variables = {}\n        self._layer_outputs = {}\n        self._layer_weights = {}\n        self._layer_biases = {}        \n        self._layer_gradients = {}\n\n        self._training_iteration = 0\n        self._validation_iteration = 0\n        self._testing_iteration = 0\n\n        self._trn_sz_tot = 0\n        self._val_sz_tot = 0\n        self._tst_sz_tot = 0\n\n        self._checkpoint = None\n        \n    def run(self, graph: Graph):\n        \"\"\"Called as the main entry point for training. Responsible for training the model.\n\n        Args:\n            graph: A PerceptiLabs Graph object containing references to all layers objects included in the model produced by this training layer.\n        \"\"\"   \n        self._status = 'initializing'\n        output_layer_id = '_Convolution_16'\n        target_layer_id = '_Data_1'\n        input_data_nodes = graph.get_direct_data_nodes(output_layer_id)\n        label_data_nodes = graph.get_direct_data_nodes(target_layer_id)\n\n        assert len(input_data_nodes) == 1\n        assert len(label_data_nodes) == 1\n        input_data_node = input_data_nodes[0]\n        label_data_node = label_data_nodes[0]\n        \n        self._trn_sz_tot = input_data_node.layer.size_training\n        self._val_sz_tot = input_data_node.layer.size_validation\n        self._tst_sz_tot = input_data_node.layer.size_testing\n        \n        print(f\"Input data sample: {input_data_node.layer_instance.sample.shape}\")\n        print(f\"Label data sample: {label_data_node.layer_instance.sample.shape}\")\n\n        # Make training set\n        dataset_trn = tf.data.Dataset.zip((\n            tf.data.Dataset.from_generator(\n                input_data_node.layer_instance.make_generator_training,\n                output_shapes=input_data_node.layer_instance.sample.shape,\n                output_types=np.float32                \n            ),\n            tf.data.Dataset.from_generator(\n                label_data_node.layer_instance.make_generator_training,\n                output_shapes=label_data_node.layer_instance.sample.shape,\n                output_types=np.float32\n            )\n        ))\n\n        # Make validation set\n        dataset_val = tf.data.Dataset.zip((\n            tf.data.Dataset.from_generator(\n                input_data_node.layer_instance.make_generator_validation,\n                output_shapes=input_data_node.layer_instance.sample.shape,\n                output_types=np.float32                \n            ),\n            tf.data.Dataset.from_generator(\n                label_data_node.layer_instance.make_generator_validation,\n                output_shapes=label_data_node.layer_instance.sample.shape,\n                output_types=np.float32\n            )\n        ))\n\n        # Make testing set\n        dataset_tst = tf.data.Dataset.zip((\n            tf.data.Dataset.from_generator(\n                input_data_node.layer_instance.make_generator_testing,\n                output_shapes=input_data_node.layer_instance.sample.shape,\n                output_types=np.float32                \n            ),\n            tf.data.Dataset.from_generator(\n                label_data_node.layer_instance.make_generator_testing,\n                output_shapes=label_data_node.layer_instance.sample.shape,\n                output_types=np.float32\n            )\n        ))\n        \n        dataset_trn = dataset_trn.batch(self._batch_size, drop_remainder=True)\n        dataset_val = dataset_val.batch(self._batch_size, drop_remainder=True)\n        dataset_tst = dataset_tst.batch(1, drop_remainder=True)                \n\n        # Make initializers\n        iterator = tf.data.Iterator.from_structure(dataset_trn.output_types, dataset_trn.output_shapes)\n        test_iterator = tf.data.Iterator.from_structure(dataset_tst.output_types, dataset_tst.output_shapes)\n        trn_init = iterator.make_initializer(dataset_trn)\n        val_init = iterator.make_initializer(dataset_val)\n        tst_init = test_iterator.make_initializer(dataset_tst)        \n        input_tensor, label_tensor = iterator.get_next()\n        print(input_tensor.shape)\n\n        # Build the TensorFlow graph # TODO: perhaps this part can be delegated to the graph?\n\n        def build_graph(input_tensor, label_tensor):\n            layer_output_tensors = {\n                input_data_node.layer_id: input_tensor,\n                label_data_node.layer_id: label_tensor\n            }\n\n            for node in graph.inner_nodes:\n                args = []\n                for input_node in graph.get_input_nodes(node):\n                    args.append(layer_output_tensors[input_node.layer_id])\n                y = node.layer_instance(*args)\n                layer_output_tensors[node.layer_id] = y\n\n\n            return layer_output_tensors\n\n        layer_output_tensors = build_graph(input_tensor, label_tensor)\n        output_tensor = layer_output_tensors[output_layer_id]\n        target_tensor = layer_output_tensors[target_layer_id]\n        \n        # Create an exportable version of the TensorFlow graph\n        self._input_tensor_export = tf.placeholder(shape=dataset_trn.output_shapes[0], dtype=dataset_trn.output_types[0])\n        self._output_tensor_export = build_graph(\n            self._input_tensor_export,\n            tf.placeholder(shape=dataset_trn.output_shapes[1], dtype=dataset_trn.output_types[1])\n        )[output_layer_id]\n\n        loss_tensor = tf.reduce_mean(tf.square(output_tensor - target_tensor))\n        correct_predictions = tf.equal(tf.argmax(output_tensor, -1), tf.argmax(target_tensor, -1))\n        accuracy_tensor = tf.reduce_mean(tf.cast(correct_predictions, tf.float32))\n\n        global_step = None\n\n        optimizer = tf.train.AdamOptimizer(learning_rate=0.001, beta1=0.9, beta2=0.999)\n\n        layer_weight_tensors = {}\n        layer_bias_tensors = {}        \n        layer_gradient_tensors = {}\n        for node in graph.inner_nodes:\n            if not isinstance(node.layer, Tf1xLayer): # In case of pure custom layers...\n                continue\n            \n            layer_weight_tensors[node.layer_id] = node.layer.weights\n            layer_bias_tensors[node.layer_id] = node.layer.biases            \n            \n            if len(node.layer.trainable_variables) > 0:\n                gradients = {}\n                for name, tensor in node.layer.trainable_variables.items():\n                    grad_tensor = tf.gradients(loss_tensor, tensor)\n                    if any(x is None for x in grad_tensor):\n                        grad_tensor = tf.constant(0)\n                    gradients[name] = grad_tensor\n                layer_gradient_tensors[node.layer_id] = gradients\n                # self._internal_layer_gradients[node.layer_id] = {name: [] for name in node.layer.trainable_variables.keys()} # Initialize\n                # self._layer_gradients = self._internal_layer_gradients.copy()\n\n        # trainable_vars = tf.trainable_variables() # TODO: safer to get from nodes. Especially with split graph in mind.\n        # grads = tf.gradients(loss_tensor, trainable_vars)\n        # update_weights = optimizer.apply_gradients(zip(grads, trainable_vars), global_step=global_step)        \n        \n        grads_and_vars = optimizer.compute_gradients(loss_tensor)\n        update_weights = optimizer.apply_gradients(grads_and_vars, global_step=global_step)\n        \n        config = tf.ConfigProto()\n        config.gpu_options.allow_growth = True\n        sess = tf.Session(config=config)\n        self._sess = sess\n\n        trackable_variables = {}\n        trackable_variables.update({x.name: x for x in tf.trainable_variables() if isinstance(x, Trackable)})\n        trackable_variables.update({k: v for k, v in locals().items() if isinstance(v, Trackable) and not isinstance(v, tf.python.data.ops.iterator_ops.Iterator)}) # TODO: Iterators based on 'stateful functions' cannot be serialized.\n        self._checkpoint = tf.train.Checkpoint(**trackable_variables)\n\n        sess.run(tf.global_variables_initializer())\n        \n                    \n\n        def train_step():\n            if not self._headless:\n                _, self._loss_training, self._accuracy_training, \\\n                    self._layer_outputs, self._layer_weights, self._layer_biases, \\\n                    self._layer_gradients \\\n                    = sess.run([\n                        update_weights, loss_tensor, accuracy_tensor,\n                        layer_output_tensors, layer_weight_tensors, layer_bias_tensors, layer_gradient_tensors\n                    ])\n            else:\n                _, self._loss_training, self._accuracy_training, \\\n                    = sess.run([\n                        update_weights, loss_tensor, accuracy_tensor\n                    ])\n            \n        def validation_step():\n            if not self._headless:\n                self._loss_validation, self._accuracy_validation, \\\n                    self._layer_outputs, self._layer_weights, self._layer_biases, \\\n                    self._layer_gradients \\\n                    = sess.run([\n                        loss_tensor, accuracy_tensor,\n                        layer_output_tensors, layer_weight_tensors, layer_bias_tensors, layer_gradient_tensors\n                    ])\n            else:\n                self._loss_validation, self._accuracy_validation, \\\n                    = sess.run([\n                        loss_tensor, accuracy_tensor\n                    ])\n\n            \n        def test_step():\n            self._loss_testing, self._accuracy_testing, \\\n                self._layer_outputs, self._layer_weights, self._layer_gradients \\\n                = sess.run([\n                    loss_tensor, accuracy_tensor,\n                    layer_output_tensors, layer_weight_tensors, layer_gradient_tensors\n                ])\n            #accuracy_list.append(acc)\n            #loss_list.append(loss)\n\n        self._variables = {k: v for k, v in locals().items() if can_serialize(v)}\n\n        log.info(\"Entering training loop\")\n\n        # Training loop\n        self._epoch = 0\n        while self._epoch < self._n_epochs and not self._stopped:\n            t0 = time.perf_counter()\n            self._training_iteration = 0\n            self._validation_iteration = 0\n            self._status = 'training'\n            sess.run(trn_init)            \n            try:\n                while not self._stopped:\n                    train_step()\n                    yield YieldLevel.SNAPSHOT\n                    self._training_iteration += 1\n            except tf.errors.OutOfRangeError:\n                pass\n\n            self._status = 'validation'\n            sess.run(val_init)            \n            try:\n                while not self._stopped:\n                    validation_step()\n                    yield YieldLevel.SNAPSHOT                    \n                    self._validation_iteration += 1\n            except tf.errors.OutOfRangeError:\n                pass\n            log.info(\n                f\"Finished epoch {self._epoch+1}/{self._n_epochs} - \"\n                f\"loss training, validation: {self.loss_training:.6f}, {self.loss_validation:.6f} - \"\n                f\"acc. training, validation: {self.accuracy_training:.6f}, {self.accuracy_validation:.6f}\"\n            )\n            log.info(f\"Epoch duration: {round(time.perf_counter() - t0, 3)} s\")            \n            self._epoch += 1\n\n        self._variables = {k: v for k, v in locals().items() if can_serialize(v)}            \n        yield YieldLevel.DEFAULT            \n        \n        # Test loop\n        self._testing_iteration = 0\n        self._status = 'testing'\n        sess.run(tst_init)                                \n        try:\n            while not self._stopped:\n                test_step()\n                yield YieldLevel.SNAPSHOT\n                self._testing_iteration += 1\n        except tf.errors.OutOfRangeError:\n            pass\n\n        self._status = 'finished'\n        self._variables = {k: v for k, v in locals().items() if can_serialize(v)}\n        yield YieldLevel.DEFAULT\n\n                \n\n    def on_export(self, path: str, mode: str) -> None:\n        \"\"\"Called when the export or save button is clicked in the frontend.\n        It is up to the implementing layer to save the model to disk.\n        \n        Args:\n            path: the directory where the exported model will be stored.\n            mode: how to export the model. Made available to frontend via 'export_modes' property.\"\"\"\n\n        log.debug(f\"Export called. Project path = {path}, mode = {mode}\")\n        pb_path = os.path.join(path, '1')\n\n        if os.path.exists(pb_path):\n            shutil.rmtree(pb_path)\n\n        os.makedirs(pb_path, exist_ok=True)\n        \n        # Export non-compressed model\n        if mode in ['TFModel', 'TFModel+checkpoint']:\n            tf.compat.v1.saved_model.simple_save(self._sess, pb_path, inputs={'input': self._input_tensor_export}, outputs={'output': self._output_tensor_export})\n\n        # Export compressed model\n        if mode in ['TFLite', 'TFLite+checkpoint']:\n            frozen_path = os.path.join(pb_path, 'frozen_model.pb')\n            converter = tf.lite.TFLiteConverter.from_session(self._sess, [self._input_tensor_export], [self._output_tensor_export])\n            converter.post_training_quantize = True\n            tflite_model = converter.convert()\n            with open(frozen_path, \"wb\") as f:\n                f.write(tflite_model)\n\n        # Export checkpoint\n        if mode in ['TFModel+checkpoint', 'TFLite+checkpoint']:\n            self._checkpoint.save(file_prefix=os.path.join(path, 'model.ckpt'), session=self._sess)\n                \n    def on_stop(self) -> None:\n        \"\"\"Called when the save model button is clicked in the frontend. \n        It is up to the implementing layer to save the model to disk.\"\"\"\n        self._stopped = True\n\n    def on_headless_activate(self) -> None:\n        \"\"\"\"Called when the statistics shown in statistics window are not needed.\n        Purose is to speed up the iteration speed significantly.\"\"\"\n        self._headless = True\n\n        self._layer_outputs = {} \n        self._layer_weights = {}\n        self._layer_biases = {}\n        self._layer_gradients = {}\n\n    def on_headless_deactivate(self) -> None:\n        \"\"\"\"Called when the statistics shown in statistics window are needed.\n        May slow down the iteration speed of the training.\"\"\"\n        import time\n        log.info(f\"Set to headless_off at time {time.time()}\")\n        self._headless = False\n\n    @property\n    def export_modes(self) -> List[str]:\n        \"\"\"Returns the possible modes of exporting a model.\"\"\"        \n        return [\n            'TFModel',\n            'TFLite'\n            'TFModel+checkpoint',\n            'TFLite+checkpoint',            \n        ]\n        \n    @property\n    def is_paused(self) -> None:\n        \"\"\"Returns true when the training is paused.\"\"\"        \n        return self._paused\n\n    @property\n    def batch_size(self):\n        \"\"\" Size of the current training batch \"\"\"        \n        return self._batch_size\n\n    @property\n    def status(self):\n        \"\"\"Called when the pause button is clicked in the frontend. It is up to the implementing layer to pause its execution.\"\"\"        \n        return self._status\n    \n    @property\n    def epoch(self):\n        \"\"\"The current epoch\"\"\"        \n        return self._epoch\n\n    @property\n    def variables(self):\n        \"\"\"Any variables belonging to this layer that should be rendered in the frontend.\n        \n        Returns:\n            A dictionary with tensor names for keys and picklable for values.\n        \"\"\"\n        return self._variables.copy()        \n\n    @property\n    def sample(self) -> np.ndarray:\n        \"\"\"Returns a single data sample\"\"\"        \n        return np.empty(())\n\n    @property\n    def columns(self) -> List[str]: \n        \"\"\"Column names. Corresponds to each column in a sample \"\"\"\n        return []\n\n    @property\n    def size_training(self) -> int:\n        \"\"\"Returns the size of the training dataset\"\"\"                                    \n        return self._trn_sz_tot\n\n    @property\n    def size_validation(self) -> int:\n        \"\"\"Returns the size of the validation dataset\"\"\"                                            \n        return self._val_sz_tot\n\n    @property\n    def size_testing(self) -> int:\n        \"\"\"Returns the size of the testing dataset\"\"\"\n        return self._tst_sz_tot\n\n    def make_generator_training(self) -> Generator[np.ndarray, None, None]:\n        \"\"\"Returns a generator yielding single samples of training data. In the case of a training layer, this typically yields the model output.\"\"\"        \n        # Simply call sess.run on the output & target tensors :)  #TODO: how to make generators generic? We have two datasets here, but not all datasets will be labeled. Distinguish between supervised/unsupervised data layers and instead REQUIRE pairs of data layers for supervised?\n        yield from []\n        \n    def make_generator_validation(self) -> Generator[np.ndarray, None, None]:\n        \"\"\"Returns a generator yielding single samples of validation data. In the case of a training layer, this typically yields the model output.\"\"\"                \n        yield from []\n        \n    def make_generator_testing(self) -> Generator[np.ndarray, None, None]:\n        \"\"\"Returns a generator yielding single samples of testing data. In the case of a training layer, this typically yields the model output.\"\"\"                        \n        yield from []\n\n    @property\n    def accuracy_training(self) -> float:\n        \"\"\"Returns the current accuracy of the training phase\"\"\"        \n        return self._accuracy_training\n    \n    @property\n    def accuracy_validation(self) -> float:\n        \"\"\"Returns the current accuracy of the validation phase\"\"\"                \n        return self._accuracy_validation\n\n    @property\n    def accuracy_testing(self) -> float:\n        \"\"\"Returns the current accuracy of the testing phase\"\"\"                        \n        return self._accuracy_testing\n\n    @property\n    def loss_training(self) -> float:\n        \"\"\"Returns the current loss of the training phase\"\"\"                \n        return self._loss_training        \n\n    @property\n    def loss_validation(self) -> float:\n        \"\"\"Returns the current loss of the validation phase\"\"\"                        \n        return self._loss_validation        \n\n    @property\n    def loss_testing(self) -> float:\n        \"\"\"Returns the current loss of the testing phase\"\"\"                \n        return self._loss_testing\n\n    @property\n    def layer_weights(self) -> Dict[str, Dict[str, Picklable]]:\n        \"\"\"The weight values of each layer in the input Graph during the training.\n\n        Returns:\n            A dictionary of nested dictionaries, where each key is a layer id. The nested dictionaries contain weight name and value pairs. The values must be picklable.\n        \"\"\"        \n        return self._layer_weights\n\n    @property\n    def layer_biases(self) -> Dict[str, Dict[str, Picklable]]:\n        \"\"\"The bias values of each layer in the input Graph during the training.\n\n        Returns:\n            A dictionary of nested dictionaries, where each key is a layer id. The nested dictionaries contain weight name and value pairs. The values must be picklable.\n        \"\"\"        \n        return self._layer_biases\n    \n    @property\n    def layer_gradients(self) -> Dict[str, Dict[str, Picklable]]:\n        \"\"\"The gradients with respect to the loss of all trainable variables of each layer in the input Graph.\n\n        Returns:\n            A dictionary of nested dictionaries, where each key is a layer id. The nested dictionaries contain gradient name and value pairs. The values must be picklable.\n        \"\"\"        \n        return self._layer_gradients\n    \n    @property\n    def layer_outputs(self) -> Dict[str, Dict[str, Picklable]]:\n        \"\"\"The output values of each layer in the input Graph during the training (e.g., tf.Tensors evaluated for each iteration)\n\n        Returns:\n            A dictionary of nested dictionaries, where each key is a layer id. The nested dictionaries contain variable name and value pairs. The values must be picklable.\n        \"\"\"\n        return self._layer_outputs\n\n    @property\n    def training_iteration(self) -> int:\n        \"\"\"The current training iteration\"\"\"\n        return self._training_iteration\n\n    @property\n    def validation_iteration(self) -> int:\n        \"\"\"The current validation iteration\"\"\"        \n        return self._validation_iteration\n\n    @property\n    def testing_iteration(self) -> int:\n        \"\"\"The current testing iteration\"\"\"                \n        return self._testing_iteration\n    \n    @property\n    def progress(self) -> float:\n        \"\"\"A number indicating the overall progress of the training\n        \n        Returns:\n            A floating point number between 0 and 1\n        \"\"\"        \n        n_iterations_per_epoch = np.ceil(self.size_training / self.batch_size) + \\\n                                 np.ceil(self.size_validation / self.batch_size)\n        n_iterations_total = self._n_epochs * n_iterations_per_epoch\n\n        iteration = self.epoch * n_iterations_per_epoch + \\\n                    self.training_iteration + self.validation_iteration\n        \n        progress = min(iteration/(n_iterations_total - 1), 1.0) \n        return progress\n"
+            },
+            "layerCodeError": null,
+            "layerNone": false,
+            "layerMeta": {
+                "isInvisible": false,
+                "isLock": false,
+                "isSelected": false,
+                "position": {
+                    "top": 220,
+                    "left": 1110
+                },
+                "OutputDim": "",
+                "InputDim": "",
+                "layerContainerName": "",
+                "layerBgColor": "",
+                "containerDiff": {
+                    "top": 0,
+                    "left": 0
+                }
+            },
+            "checkpoint": [],
+            "endPoints": [],
+            "componentName": "TrainNormal",
+            "connectionOut": [],
+            "connectionIn": [
+                "1590007958056",
+                "1589911710301"
+            ],
+            "connectionArrow": []
+        }
+    }
+}
