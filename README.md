@@ -16,6 +16,8 @@ This repo has the following structure:
 
 # Installation
 
+**Note**: you must be running PerceptiLabs 0.10.0 or higher to load this model.
+
 Follow the steps below to load the sample model in PerceptiLabs:
 
 1. Clone or download the sample model from GitHub.
