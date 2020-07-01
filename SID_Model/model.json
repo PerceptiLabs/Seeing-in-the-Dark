@@ -2,6 +2,9 @@
     "networkName": "SID_U-Net",
     "networkID": "1589320999731",
     "networkMeta": {},
+    "apiMeta": {
+        "location": "/"
+    },
     "networkElementList": {
         "1589911710301": {
             "layerId": "1589911710301",
