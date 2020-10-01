@@ -1,4 +1,8 @@
-[![PerceptiLabs](./pl_logo.png)](https://www.perceptilabs.com/home)
+<p align="center">
+  <a href="https://www.perceptilabs.com">
+  <img src="./pl_logo.png">
+  </a>
+</p>
 
 # Seeing in the Dark
 This example PerceptiLabs model, shows how a special type of [convolutional neural network (CNN)](https://en.wikipedia.org/wiki/Convolutional_neural_network) called a [U-Net](https://en.wikipedia.org/wiki/U-Net), can be used to enhance dark photos. 
