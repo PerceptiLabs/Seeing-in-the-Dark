@@ -9,7 +9,7 @@ This example PerceptiLabs model, shows how a special type of [convolutional neur
 
 The concept behind this approach is based on that described in *Learning to See in the Dark (SID)*, a scholarly article published on [https://arxiv.org/abs/1805.01934](https://arxiv.org/abs/1805.01934) that demonstrates how machine learning (ML) can be used in place of traditional digital image processing techniques, to enhance very dark images. 
 
-The resources provided in this GitHub repo, supplement our [Using a U-Net to Enhance Dark Photos](https://perceptilabs-frontend.herokuapp.com/docs/u-net_usecase) documentation topic.
+The resources provided in this GitHub repo, supplement our [Using a U-Net to Enhance Dark Photos](https://www.perceptilabs.com/docs/u-net_usecase) documentation topic.
 
 Happy hacking!
 
