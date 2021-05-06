@@ -24,7 +24,7 @@ This repo has the following structure:
 
 # Installation
 
-**Note**: you must be running PerceptiLabs 0.10.0 or higher to load this model.
+**Note**: you must be running PerceptiLabs 0.10.0 or 0.11 to load this model. This model is not compatible with PerceptiLabs 0.12.
 
 Follow the steps below to load the sample model in PerceptiLabs:
 
